@@ -37,4 +37,4 @@ jobs:
       # Генерируем отчет о тестах
       - name: Tests report
         run: |
-          coverage report
+          uv run coverage report
