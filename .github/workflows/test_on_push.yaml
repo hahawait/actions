@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install uv coverage
+          pip install uv
 
       # Синхронизируем зависимости (если необходимо)
       - name: Sync dependencies
@@ -32,7 +32,7 @@ jobs:
       # Запускаем тесты
       - name: Run tests
         run: |
-          coverage run test.py
+          uv run test.py
 
       # Генерируем отчет о тестах
       - name: Tests report
