@@ -20,10 +20,14 @@ jobs:
           architecture: 'x64'
 
       # Устанавливаем зависимости
-      - name: Install requirements
+      - name: Install dependencies
         run: |
-          pip install uv
-          uv sync
+          pip install --upgrade pip
+          pip install uv coverage
+
+      # Синхронизируем зависимости (если необходимо)
+      - name: Sync dependencies
+        run: uv sync
 
       # Запускаем тесты
       - name: Run tests
